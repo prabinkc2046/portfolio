@@ -1,11 +1,11 @@
 {
-    "short_name": "Prabin's Portfolio",
+    "short_name": "Prabin",
     "name": "Prabin K C - Full Stack Developer & DevOps Specialist",
     "description": "A portfolio site showcasing full-stack development, DevOps, and software engineering skills.",
     "start_url": "/portfolio/index.html",
     "scope": "/portfolio/",
     "display": "standalone",
-    "background_color": "#ffffff",
+    "background_color": "#f0f0f0",
     "theme_color": "#000000",
     "orientation": "portrait",
     "icons": [
