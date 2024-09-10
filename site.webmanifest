@@ -2,7 +2,7 @@
     "short_name": "Prabin's Portfolio",
     "name": "Prabin K C - Full Stack Developer & DevOps Specialist",
     "description": "A portfolio site showcasing full-stack development, DevOps, and software engineering skills.",
-    "start_url": "/portfolio/",
+    "start_url": "/portfolio/index.html",
     "scope": "/portfolio/",
     "display": "standalone",
     "background_color": "#ffffff",
@@ -12,22 +12,54 @@
       {
         "src": "android-chrome-192x192.png",
         "sizes": "192x192",
-        "type": "image/png"
+        "type": "image/png",
+        "purpose": "any maskable"
       },
       {
         "src": "android-chrome-512x512.png",
         "sizes": "512x512",
-        "type": "image/png"
+        "type": "image/png",
+        "purpose": "any maskable"
       },
       {
         "src": "apple-touch-icon.png",
         "sizes": "180x180",
-        "type": "image/png"
+        "type": "image/png",
+        "purpose": "any maskable"
       },
       {
         "src": "favicon-32x32.png",
         "sizes": "32x32",
-        "type": "image/png"
+        "type": "image/png",
+        "purpose": "any"
+      }
+    ],
+    "shortcuts": [
+      {
+        "name": "Skills",
+        "short_name": "Skills",
+        "description": "Go to Skills section",
+        "url": "/portfolio/#skills",
+        "icons": [
+          {
+            "src": "android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+          }
+        ]
+      },
+      {
+        "name": "Experience",
+        "short_name": "Experience",
+        "description": "Go to Experience section",
+        "url": "/portfolio/#experience",
+        "icons": [
+          {
+            "src": "android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+          }
+        ]
       }
     ]
   }
