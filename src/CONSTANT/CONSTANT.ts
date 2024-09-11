@@ -497,7 +497,7 @@ export const contactList: ContactType[] = [
 
 
 export const NavbarMenuItemsList: NavMenuItemType[] = [
-  {id:'#personal-info', displayName:'Home'},
+  {id:'#personal-info', displayName:'Me'},
   {id:'#skills',displayName:'Skills'},
   {id: '#experience',displayName: 'Experience'},
   {id: '#projects',displayName: 'Projects'},

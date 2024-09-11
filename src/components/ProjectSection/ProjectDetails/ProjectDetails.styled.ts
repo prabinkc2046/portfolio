@@ -5,7 +5,7 @@ export const ProjectCard = styled.div`
    background-color: #fff;
   border-radius: 10px;
   padding: 25px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 4px 12px rgba(255, 255, 255, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added 'ease' for smoother transition */
   overflow: hidden;
   display: flex;
@@ -34,7 +34,7 @@ export const ProjectCard = styled.div`
   
   &:hover {
     transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), 0 6px 16px rgba(255, 255, 255, 0.15);
   
   }
 

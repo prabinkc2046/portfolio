@@ -36,12 +36,13 @@ export const Box3D = styled.div`
   background-color: white;
   border-radius: 8px;
   padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.9), 0 3px 6px rgba(0, 0, 0, 0.08);
+
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15), 0 4px 6px rgba(0, 0, 0, 0.1);
+
   }
 `;
 
@@ -61,10 +62,11 @@ export const PortfolioSectionNavItem = styled.button<{isSelected: boolean}>`
   padding: 3px 5px;
   border: none;
   border-radius: 5px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.9);
   background-color: ${({theme}) => theme.colors.secondaryBg};
   color: ${({theme}) => theme.colors.primaryFontColor};
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 2s ease;
   width: 100px;
   font-size: var(--small-screen-font-size);
   text-align: center;
@@ -92,4 +94,16 @@ export const PortfolioSectionNavItem = styled.button<{isSelected: boolean}>`
     font-size: ${({theme}) => theme.fonts.large};
     width: 110px;
   }
+`;
+
+
+export const ThreeDText = styled.p`
+  /* font-size: 48px; */
+  /* color: #333; */
+  text-shadow: 
+    1px 1px 0 #fff,
+    2px 2px 0 #ddd,
+    0px 1px 2px rgba(0, 0, 0, 0.8),
+    3px 3px 3px rgba(0, 0, 0, 0.2),
+    4px 4px 4px rgba(0, 0, 0, 0.1);
 `;

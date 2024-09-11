@@ -18,7 +18,7 @@ import {
 
 export default function ProjectList() {
   const [expandedProjectIndex, setExpandedProjectIndex] = useState<null | number>(null);
-  const [selectedSkill, setSelectedSkill] = useState('Web FrameWorks');
+  const [selectedSkill, setSelectedSkill] = useState('API Development');
   const {isMobile} = useScreenContext();
   
   const handleProjectClick = (index: number) => {

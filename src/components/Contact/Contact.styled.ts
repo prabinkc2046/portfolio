@@ -121,7 +121,7 @@ export const ContactForm = styled(Box3D).attrs({as:'form'})`
     width: 100%;
     padding: 1.5rem;
     border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.9); /* Soft shadow */
     max-width: 500px;
     min-width: 100px;
     background-color: ${({theme}) => theme.colors.secondaryBg};

@@ -7,7 +7,7 @@ export const SkillsContainer = styled.div<{isOpen: boolean}>`
     overflow: hidden;
     transition: max-height 1s ease-out, transform 1s ease-out; /* Smooth transition for height and transform */
     transform: translateZ(-100px); /* Initial 3D effect for hidden state */
-    opacity: 0; /* Initially transparent */
+    /* opacity: 0; Initially transparent */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,10 +18,8 @@ export const SkillsContainer = styled.div<{isOpen: boolean}>`
 `
 
 export const SkillsCard = styled.div<{isOpen: boolean}>`
-    border: 1px solid var(--secondary-bg);
     border-radius: 8px;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
     perspective: 1000px; /* Adding perspective to give 3D effect */
     overflow: hidden; /* Ensures content does not overflow */
@@ -31,7 +29,7 @@ export const SkillsCard = styled.div<{isOpen: boolean}>`
 
     &:hover {
         transform: translateZ(10px) scale(1.05);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
         z-index: 10;
     }
 
@@ -44,7 +42,7 @@ export const SkillsCard = styled.div<{isOpen: boolean}>`
     ${({isOpen}) => 
         isOpen && `
         transform: translateZ(10) scale(1.05); /* Reset transform when opened */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Keep the shadow steady when open */
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.9);
 
         ${SkillsContainer} {
             max-height: 500px;

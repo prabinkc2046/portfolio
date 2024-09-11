@@ -36,7 +36,8 @@ export const ProjectTitle = styled.h3`
 export const SkillNavItem = styled.div<{isSelected: boolean}>`
   cursor: pointer;
   border-radius: 8px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.5);
+  transition: background-color 1s ease, box-shadow 1s ease;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -57,7 +58,8 @@ export const SkillNavItem = styled.div<{isSelected: boolean}>`
   ${({isSelected}) => isSelected && `
     font-weight: bold;
     background-color: #0072ff;
-    color: #ffffff;  
+    color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.9);
   `   
   }
 
@@ -144,8 +146,8 @@ const FadeIn = keyframes`
 export const Project = styled.li<{ index: number }>`
   padding: 5px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 1s ease, box-shadow 1s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
   position: relative;
   cursor: pointer;
   overflow: hidden;
@@ -169,8 +171,8 @@ export const Project = styled.li<{ index: number }>`
   }
 
   &:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transform: translateZ(10px) scale(1.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
   }
 
   @media(min-width: 600px) {

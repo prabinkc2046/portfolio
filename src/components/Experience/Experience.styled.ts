@@ -25,24 +25,23 @@ export const ExperienceSectionWrapper = styled(Card)`
 `;
 
 export const ExperienceCardWrapper = styled.div`
-  display: grid;
-  grid-template-columns: auto;
-  row-gap: 20px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap:15px;
+  justify-content: center;
 
   @media (min-width: 600px) {
-    grid-template-columns: auto auto;
-    gap: 20px;
+    justify-content: flex-start;
   }
 
   @media (min-width: 900px) {
-    grid-template-columns: auto auto auto;
-    gap: 20px;
+    
   }
 `;
 
 export const ExperienceCard = styled(Box3D)`
   border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   padding: 15px;
   display: flex;
   flex-direction: column;
@@ -50,9 +49,17 @@ export const ExperienceCard = styled(Box3D)`
   gap: 5px;
   background-color: ${({ theme }) => theme.colors.secondaryBg}; /* Updated with theme */
   color: ${({ theme }) => theme.colors.primaryFontColor}; /* Updated with theme */
-
+  width: 100%;
   h4 {
     margin-bottom: 10px;
     color: #0072ff; /* Hardcoded color; consider adding to theme if consistent use */
+  }
+
+  @media(min-width: 600px){
+    max-width: 200px;
+  }
+  
+  @media(min-width: 900px){
+    max-width: 250px;
   }
 `;

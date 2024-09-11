@@ -23,9 +23,9 @@ export const PersonalInfoStyled = styled(Card)`
     width: 100%;
     margin: 0 auto;
     margin-top: 70px;
-    font-size: 1.1rem;
-    line-height: 2;
-    letter-spacing: 1px;
+    font-size: 1.2rem;
+    line-height: 2.1;
+    letter-spacing: 1.5px;
     background-color: ${({theme}) => theme.colors.primaryBg};
     color: ${({theme}) => theme.colors.secondaryFontColor};
 

@@ -32,11 +32,10 @@ export const TestimonySectionWrapper = styled(Card)`
 export const TestimonyCardsWrapper = styled.div`
     display: grid;
     grid-template-columns: auto;
-    row-gap: 5px;
-
+    gap: 12px;
     @media (min-width: 600px){
       grid-template-columns: auto auto;
-      gap: 10px;
+      gap: 12px;
     }
 
     @media (min-width: 900px){
@@ -44,18 +43,23 @@ export const TestimonyCardsWrapper = styled.div`
     }
 `
 
-export const TestimonyCard = styled(Card)`
-   border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+export const TestimonyCard = styled.div`
+    border-radius: 10px;
     padding: 15px;
     display: flex;
     flex-direction: column;
     gap: 5px;
     background-color: ${({theme}) => theme.colors.secondaryBg};
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+    transition: box-shadow 0.5s ease, transform 0.5s ease;
 
+    &:hover{
+      transform: scale(1.05);
+      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.9);
+    }
     p {
     margin-bottom: 5px;
-  }
+    }
 `
 export const TestimonyProviderName = styled.strong`
 color: blue;

@@ -27,38 +27,36 @@ export const EducationSectionWrapper = styled(Card)`
 `;
 
 export const EducationCardWrapper = styled.div`
-  display: grid;
-  grid-template-columns: auto;
-  justify-content: stretch;
-  align-content: space-between;
+  display: flex;
   gap: 10px;
   width: 100%;
   padding: 5px;
 
   @media (min-width: 900px) {
-    grid-template-columns: auto auto;
-    padding: 20px;
+  
   }
 `;
 
 export const EducationCard = styled.div<{ open: boolean, height: number }>`
   width: 100%;
-  padding: 10px;
+  padding: 5px;
   border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  opacity: 0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
   animation: fadeInUp 0.7s ease-in-out forwards;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  transition: height 1.75s ease;
-  height: 175px;
+  transition: height 1.5s ease, box-shadow 0.8s ease, transform 0.8s ease;
+  height: 220px;
   overflow: hidden;
-  max-height: 1000px;
-  min-height: 175px;
+  min-height: 220px;
   background-color: ${({ theme }) => theme.colors.secondaryBg}; /* Updated with theme */
 
+  &:hover{
+    transform: translateZ(10px) scale(1.05);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.9);
+  }
   ${({ open, height }) =>
     open &&
     `
@@ -66,13 +64,12 @@ export const EducationCard = styled.div<{ open: boolean, height: number }>`
     transform: scale(1.03);
   `}
 
-  @media (min-width: 600px) {
-    &:hover {
-      transform: scale(1.03);
-      max-height: 900px;
-      height: ${({height}) => `${height}px`};
-      opacity: 1;
-    }
+  @media(min-width: 500px){
+    min-height: 200px;
+  }
+
+  @media(min-width: 800px){
+    min-height: 175px;
   }
 `;
 
@@ -107,14 +104,9 @@ export const SubjectsContainer = styled.div<{ open: boolean}>`
   gap: 5px;
   padding-top: 10px;
   overflow: hidden;
-  opacity: 0;
-  transition: opacity 1.75s ease;
-
-  ${({ open}) =>
-    open &&
-    `
-    opacity: 1;
-  `}
+  position: absolute;
+  left: 0;
+  top: 220px;
 `;
 
 export const Subject = styled(Card)`
@@ -124,7 +116,12 @@ export const Subject = styled(Card)`
   font-size: 1rem;
   background-color: ${({ theme }) => theme.colors.accentBg}; /* Updated with theme */
   color: ${({ theme }) => theme.colors.secondaryFontColor}; /* Updated with theme */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.9s ease;
 
+  &:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9); /* Slightly stronger shadow */
+  }
   p {
     display: flex;
     align-items: center;

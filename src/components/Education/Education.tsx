@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react';
-// import './Education.css';
 import { universities } from '../../CONSTANT/CONSTANT';
 
 import { EducationSectionWrapper,
@@ -14,26 +13,8 @@ import { EducationSectionWrapper,
  
 export default function Education() {
   const [openCard, setOpenCard] = useState<string | null>('Melbourne Institute of Technology'); // State to manage the open card
-  const [isTablet, setIsTablet] = useState<boolean>(window.innerWidth < 900);
   const [educationCardHeight, setEducationCardHeight] = useState(0);
   const educationCardRef = useRef<HTMLDivElement>(null);
-
-  // Handle hover for larger screens
-  const handleCardHover = (name: string, isHover: boolean) => {
-    if (!isTablet) {
-      setOpenCard(isHover ? name : null); // Only allow one card to be hovered at a time
-    }
-  };
-
-  useEffect(() => {
-    const handleScreenSize = () => {
-      setIsTablet(window.innerWidth < 900);
-    }
-    window.addEventListener('resize', handleScreenSize);
-    return () => {
-      window.removeEventListener('resize', handleScreenSize)
-    }
-  },[])
 
   const handleCardClick = (name: string) => {
     setOpenCard((prevOpenCard) => prevOpenCard === name ? null : name);
@@ -43,7 +24,7 @@ export default function Education() {
 
   useEffect(() => {
     if(educationCardRef.current){
-     setEducationCardHeight((educationCardRef.current.scrollHeight + 175));
+     setEducationCardHeight((educationCardRef.current.scrollHeight + 220));
     }
   },[openCard])
   
@@ -60,8 +41,7 @@ export default function Education() {
               open={openCard === uni.name}
               onClick={() => handleCardClick(uni.name)}
               onDoubleClick={() => handleCardClick(uni.name)}
-              onMouseEnter={() => handleCardHover(uni.name, true)}
-              onMouseLeave={() => handleCardHover(uni.name, false)}
+              
             >
                 <EducationDetailContainer>
                   <h4>{uni.name}</h4>
