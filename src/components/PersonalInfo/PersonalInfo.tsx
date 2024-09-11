@@ -1,6 +1,5 @@
 import { profileIntro } from '../../CONSTANT/CONSTANT';
 import { PersonalInfoStyled, ProfilePhotoContainer, ProfilePhoto, PersonalText } from './PersonalInfo.styled';
-import { ThreeDText } from '../../commonStyles/common.styled';
 
 
 export default function PersonalInfo() {
@@ -14,7 +13,7 @@ export default function PersonalInfo() {
 
       <PersonalText>
         <h2>Prabin K C</h2>
-        <ThreeDText>{profileIntro}</ThreeDText>
+        <p>{profileIntro}</p>
       </PersonalText>
 
     </PersonalInfoStyled>

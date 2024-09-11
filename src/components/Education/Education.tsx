@@ -12,7 +12,7 @@ import { EducationSectionWrapper,
 
  
 export default function Education() {
-  const [openCard, setOpenCard] = useState<string | null>('Melbourne Institute of Technology'); // State to manage the open card
+  const [openCard, setOpenCard] = useState<string | null>(null); // State to manage the open card
   const [educationCardHeight, setEducationCardHeight] = useState(0);
   const educationCardRef = useRef<HTMLDivElement>(null);
 
@@ -24,7 +24,7 @@ export default function Education() {
 
   useEffect(() => {
     if(educationCardRef.current){
-     setEducationCardHeight((educationCardRef.current.scrollHeight + 250));
+     setEducationCardHeight((educationCardRef.current.scrollHeight));
     }
   },[openCard])
   
@@ -43,7 +43,7 @@ export default function Education() {
               onDoubleClick={() => handleCardClick(uni.name)}
               
             >
-                <EducationDetailContainer>
+                <EducationDetailContainer open={openCard === uni.name}>
                   <h4>{uni.name}</h4>
                   <p>{uni.degree}</p>
                   <p>Graduated: {uni.finishedYear}</p>

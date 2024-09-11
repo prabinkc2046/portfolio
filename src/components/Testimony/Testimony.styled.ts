@@ -32,10 +32,10 @@ export const TestimonySectionWrapper = styled(Card)`
 export const TestimonyCardsWrapper = styled.div`
     display: grid;
     grid-template-columns: auto;
-    gap: 12px;
+    gap: 20px;
     @media (min-width: 600px){
       grid-template-columns: auto auto;
-      gap: 12px;
+      gap: 20px;
     }
 
     @media (min-width: 900px){

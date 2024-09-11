@@ -73,7 +73,7 @@ export const EducationCard = styled.div<{ open: boolean, height: number }>`
   }
 `;
 
-export const EducationDetailContainer = styled.div`
+export const EducationDetailContainer = styled.div<{open: boolean}>`
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -81,6 +81,8 @@ export const EducationDetailContainer = styled.div`
   gap: 8px;
   padding: 10px;
   cursor: pointer;
+  opacity: ${({open}) => open ? '0' : '1'};
+  z-index: ${({open}) => open ? '-1': '1'};
 
   p,
   h4 {
@@ -106,7 +108,10 @@ export const SubjectsContainer = styled.div<{ open: boolean}>`
   overflow: hidden;
   position: absolute;
   left: 0;
-  top: 250px;
+  top: 0px;
+  opacity: ${({open}) => open ? '1' : '0'};
+  z-index: ${({open}) => open ? '1' : '-1'};
+
 `;
 
 export const Subject = styled(Card)`
