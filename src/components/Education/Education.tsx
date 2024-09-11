@@ -24,7 +24,7 @@ export default function Education() {
 
   useEffect(() => {
     if(educationCardRef.current){
-     setEducationCardHeight((educationCardRef.current.scrollHeight + 220));
+     setEducationCardHeight((educationCardRef.current.scrollHeight + 250));
     }
   },[openCard])
   

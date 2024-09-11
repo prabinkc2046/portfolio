@@ -50,7 +50,7 @@ export const EducationCard = styled.div<{ open: boolean, height: number }>`
   transition: height 1.5s ease, box-shadow 0.8s ease, transform 0.8s ease;
   height: 220px;
   overflow: hidden;
-  min-height: 220px;
+  min-height: 250px;
   background-color: ${({ theme }) => theme.colors.secondaryBg}; /* Updated with theme */
 
   &:hover{
@@ -106,14 +106,14 @@ export const SubjectsContainer = styled.div<{ open: boolean}>`
   overflow: hidden;
   position: absolute;
   left: 0;
-  top: 220px;
+  top: 250px;
 `;
 
 export const Subject = styled(Card)`
   width: 100%;
-  font-weight: bold;
-  line-height: 1.5;
-  font-size: 1rem;
+  /* font-weight: bold; */
+  /* line-height: 1.5; */
+  font-size: 0.6rem;
   background-color: ${({ theme }) => theme.colors.accentBg}; /* Updated with theme */
   color: ${({ theme }) => theme.colors.secondaryFontColor}; /* Updated with theme */
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
@@ -126,8 +126,16 @@ export const Subject = styled(Card)`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 5px;
-    overflow: hidden;
+    /* gap: 5px; */
+    /* overflow: hidden; */
+  }
+
+  @media(min-width: 600px){
+    font-size: 1rem;
+
+    p {
+      gap: 5px;
+    }
   }
 `;
 
