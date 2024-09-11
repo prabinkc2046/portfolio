@@ -68,6 +68,7 @@ export const PortfolioSectionNavItem = styled.button<{isSelected: boolean}>`
   width: 100px;
   font-size: var(--small-screen-font-size);
   text-align: center;
+  overflow: hidden;
   color: ${({theme}) => theme.colors.secondaryFontColor};
 
   ${({isSelected}) => isSelected && `

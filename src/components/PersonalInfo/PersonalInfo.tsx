@@ -1,6 +1,5 @@
 import { profileIntro } from '../../CONSTANT/CONSTANT';
 import { PersonalInfoStyled, ProfilePhotoContainer, ProfilePhoto, PersonalText } from './PersonalInfo.styled';
-
 export default function PersonalInfo() {
   return (
     

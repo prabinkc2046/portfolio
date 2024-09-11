@@ -5,6 +5,7 @@ import Modal from '../../UtilityComponents/Modal/Modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { projects } from '../../../CONSTANT/CONSTANT';
 import { useScreenContext } from '../../../context/screenContext';
+import { skills } from '../../../CONSTANT/CONSTANT';
 import { 
   ProjectSectionWrapper, 
   SkillsNavbar, 
@@ -19,23 +20,6 @@ export default function ProjectList() {
   const [expandedProjectIndex, setExpandedProjectIndex] = useState<null | number>(null);
   const [selectedSkill, setSelectedSkill] = useState('Web FrameWorks');
   const {isMobile} = useScreenContext();
-  const skills = [
-    "All",
-    "API Development",
-    "Web FrameWorks",
-    "Web Deployment",
-    "Web Servers",
-    "Linux",
-    "DBMS",  
-    "Python",
-    "CI/CD",
-    "Node.js",
-    "AWS", 
-    "Ansible",
-    "Docker",  
-    "Kubernetes",
-    "Scripting",
-  ];
   
   const handleProjectClick = (index: number) => {
     setExpandedProjectIndex(index);

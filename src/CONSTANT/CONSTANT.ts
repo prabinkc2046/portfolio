@@ -8,9 +8,11 @@ import Testimony from '../components/Testimony/Testimony';
 import { Contact } from '../components/Contact/Contact';
 import Repository from '../components/Repository/Repository';
 
+
 import {
-    faDatabase, faChartLine, faCodeBranch, faCloud, faServer, faLock, faTools, faFileCode, faCloudUploadAlt, faBacon, faBox, faCube
+   faFileAlt, faLaptopCode, faDatabase, faChartLine, faCodeBranch, faCloud, faServer, faLock, faTools, faFileCode, faCloudUploadAlt, faBacon, faBox, faCube, 
   } from '@fortawesome/free-solid-svg-icons';
+
 
 import { 
   ProjectType, 
@@ -19,12 +21,29 @@ import {
   TestimonyType, 
   UniversityType,
   ContactType,
-NavMenuItemType,
-SectionType } from '../CONSTANT/CONSTANT.types';
+  NavMenuItemType,
+  SectionType } from '../CONSTANT/CONSTANT.types';
 
 export const profileIntro: string = "Dynamic professional skilled in system engineering and full-stack development. Proficient in Python, JavaScript, AWS, and DevOps tools like Docker and Kubernetes. Expert in building robust web apps with React, optimizing performance, and ensuring system reliability. Passionate about teamwork, mentoring, and solving complex challenges to drive business success."
 
   export const projects: ProjectType[] = [
+    {
+      name: "Personal Portfolio Website",
+      description: "Developed a responsive portfolio website using React and TypeScript to showcase projects, skills, and experience.",
+      outcome: "Created a visually appealing and user-friendly platform to enhance personal branding and job prospects.",
+      skills: ["React", "TypeScript", "Styled Components", "CSS", "HTML", "JavaScript", "GitHub Pages", "Git", "Responsive Design", "Context API"],
+      githubLink: "https://github.com/prabinkc2046/portfolio",
+      icon: faLaptopCode
+    },
+    {
+      name: "File Management System with Text Extraction and Summarization",
+      description: "Developed a full-stack application for efficient file management, text extraction, and summarization using FastAPI and React.",
+      outcome: "Enhanced document handling, analysis, and management with a secure, scalable, and user-friendly solution.",
+      skills: ["React","FastAPI", "MongoDB", "Python", "API Development"],
+      githubLink: "https://github.com/prabinkc2046/File-Management-System-with-Text-Extraction-and-Summarization",
+      icon: faFileAlt,
+      youtubeLink:"https://www.youtube.com/watch?v=fsmzRCtS3OY"
+    },      
     {
       name: "MongoDB Setup and API Integration",
       description: "Installed and configured MongoDB on Ubuntu Linux, facilitating frontend-backend integration.",
@@ -46,7 +65,7 @@ export const profileIntro: string = "Dynamic professional skilled in system engi
       name: "React App Build and Deployment",
       description: "Configured a GitHub Actions workflow to build and deploy a React app to a Linode server.",
       outcome: "Automated deployment process, ensuring up-to-date builds on the server.",
-      skills: ["CI/CD", "React"],
+      skills: ["CI/CD", "Web Deployment"],
       githubLink: "https://github.com/prabinkc2046/taskmanagerwithReact/tree/main",
       icon: faCodeBranch
     },
@@ -62,7 +81,7 @@ export const profileIntro: string = "Dynamic professional skilled in system engi
       name: "React App Deployment with Nginx and Let's Encrypt",
       description: "Deployed a React app on Ubuntu using Nginx and secured it with Let's Encrypt SSL.",
       outcome: "Successfully deployed and secured a React application on a remote server.",
-      skills: ["React", "Nginx","Linux"],
+      skills: ["Web Deployment", "Nginx","Linux"],
       githubLink: "https://github.com/prabinkc2046/Deploying-a-React-App-with-Nginx-and-Let-s-Encrypt",
       icon: faServer
     },
@@ -79,7 +98,7 @@ export const profileIntro: string = "Dynamic professional skilled in system engi
       name: "Auto-Scaling Group to Scale Django Application with ELB Health Check",
       description: "Implemented auto-scaling for a Django application using an Auto Scaling Group and Application Load Balancer.",
       outcome: "Ensured seamless scaling of the Django application with automated scaling and load balancing.",
-      skills: ["AWS", "Python", "Web Frameworks"],
+      skills: ["AWS", "Python", "Django"],
       youtubeLink: "https://youtu.be/qdqGKtvUgAQ?si=gp_JRcxfHaVTUQvB",
       githubLink: "https://github.com/prabinkc2046/Auto-Scaling-Group-to-scale-Django-Application-with-ELB-health-check",
       icon: faTools
@@ -88,7 +107,7 @@ export const profileIntro: string = "Dynamic professional skilled in system engi
       name: "Scalable Architecture: Deploying Django with Network Load Balancer and MySQL",
       description: "Deployed a scalable Django application using Network Load Balancer and MySQL server.",
       outcome: "Achieved a robust, scalable, and secure cloud infrastructure for Django applications.",
-      skills: ["AWS", "Web Frameworks", "DBMS"],
+      skills: ["AWS", "Django", "DBMS"],
       youtubeLink: "https://youtu.be/UK_zi0v8qjI",
       githubLink: "https://github.com/prabinkc2046/Highly-Available-Django-Architecting-with-Network-Load-Balancer-and-MySQL-?tab=readme-ov-file",
       icon: faCube
@@ -97,7 +116,7 @@ export const profileIntro: string = "Dynamic professional skilled in system engi
       name: "Containerized App Scalability with AWS ALB",
       description: "Built and containerized a high-speed application, deployed with Docker, and used AWS ALB for scalability.",
       outcome: "Enhanced scalability and performance of Dockerized FastAPI application with AWS ALB.",
-      skills: ["Docker", "AWS", "Web Frameworks"],
+      skills: ["Docker", "AWS", "FastAPI"],
       youtubeLink: "https://youtu.be/KNitmmYJP_c",
       githubLink: "https://github.com/prabinkc2046/Containerized-App-Scalability-with-AWS-ALB-Demo",
       icon: faBacon
@@ -131,7 +150,7 @@ export const profileIntro: string = "Dynamic professional skilled in system engi
       name: "Django Application Deployment and Automation",
       description: "Covers deployment and automation of Django applications, including Apache load balancing and AWS ALB.",
       outcome: "Streamlined and automated the deployment process for Django applications.",
-      skills: ["Web Frameworks", "AWS"],
+      skills: ["Django", "AWS"],
       youtubeLink: "https://youtu.be/VkGfj6f9TvU",
       githubLink: "https://github.com/prabinkc2046/Django-App-Deployment-with-Apache-Load-Balancer-and-AWS-Application-Load-Balancer",
       icon: faTools
@@ -140,7 +159,7 @@ export const profileIntro: string = "Dynamic professional skilled in system engi
       name: "Modular Web Deployment: Apache, Gunicorn, and Flask",
       description: "Demonstrates a modular deployment approach with Apache, Gunicorn, and Flask, including SSL encryption.",
       outcome: "Achieved a modular deployment architecture for enhanced scalability and resource optimization.",
-      skills: ["Web Servers", "Web FrameWorks", "Web Deployment"],
+      skills: ["Web Servers", "Flask", "Web Deployment"],
       youtubeLink: "https://youtu.be/TM8UIQqkGdM",
       githubLink: "https://github.com/prabinkc2046/Modular-Web-deployment-with-Apache-Gunicorn-Flask",
       icon: faBox
@@ -149,7 +168,7 @@ export const profileIntro: string = "Dynamic professional skilled in system engi
       name: "Flask App Deployment with Apache and mod_wsgi",
       description: "Deployed a Flask application with Apache and mod_wsgi, including configuration and WSGI script setup.",
       outcome: "Successfully deployed a Flask application using Apache and mod_wsgi.",
-      skills: ["Python", "Web Servers"," Web Deployment", "Web FrameWorks"],
+      skills: ["Python", "Web Servers"," Web Deployment", "Flask"],
       youtubeLink: "https://youtu.be/nTkgBwa1gLw",
       githubLink: "https://github.com/prabinkc2046/Flask-App-Deployment-with-Apache-and-mod_wsgi",
       icon: faFileCode
@@ -250,64 +269,126 @@ export const profileIntro: string = "Dynamic professional skilled in system engi
 
 export const categorizedSkills: CategorizedSkillType[] = [
   {
-    relatedArea: "Operating Systems & Scripting",
+    relatedArea: "Frontend Development",
     skills: [
-      { name: "Linux", level: 90, icon: "fas fa-linux" },
-      { name: "Windows Server", level: 60, icon: "fas fa-windows" },
-      { name: "Bash Scripting", level: 85, icon: "fas fa-terminal" }
+      { name: "TypeScript", level: 70, icon: "fab fa-js-square" },
+      { name: "React", level: 85, icon: "fab fa-react" },
+      { name: "Bootstrap", level: 75, icon: "fab fa-bootstrap" },
+      { name: "Tailwind CSS", level: 70, icon: "fa fa-cogs" },
+      { name: "Redux", level: 70, icon: "fas fa-puzzle-piece" },
+      { name: "Context API", level: 80, icon: "fas fa-cogs" },
+      { name: "API Integration", level: 80, icon: "fas fa-plug" },
+      { name: "React Query", level: 70, icon: "fas fa-search" }
     ]
   },
   {
-    relatedArea: "Networking & Infrastructure",
-    skills: [
-      { name: "Networking", level: 85, icon: "fas fa-network-wired" },
-      { name: "AWS", level: 70, icon: "fab fa-aws" },
-      { name: "Ansible", level: 50, icon: "fas fa-cogs" },
-      { name: "Kubernetes", level: 65, icon: "fas fa-cube" },
-      { name: "Docker", level: 80, icon: "fab fa-docker" }
-    ]
-  },
-  {
-    relatedArea: "Programming & Development",
+    relatedArea: "Backend Development",
     skills: [
       { name: "Python", level: 80, icon: "fab fa-python" },
-      { name: "TypeScript", level: 70, icon: "fab fa-js-square" },
       { name: "Node.js", level: 70, icon: "fab fa-node" }
     ]
   },
   {
-    relatedArea: "Frameworks & Libraries",
+    relatedArea: "Frameworks",
     skills: [
+      { name: "React", level: 85, icon: "fab fa-react" },
       { name: "FastAPI", level: 75, icon: "fas fa-cogs" },
-      { name: "Django", level: 70, icon: "fab fa-python" },
-      { name: "React", level: 85, icon: "fab fa-react" }
+      { name: "Express.js", level: 70, icon: "fas fa-code" },
+      { name: "Django", level: 65, icon: "fab fa-python" },
+      { name: "Bootstrap", level: 70, icon: "fab fa-bootstrap" }
+    ]
+  },
+  {
+    relatedArea: "Operating Systems",
+    skills: [
+      { name: "Linux", level: 90, icon: "fas fa-linux" },
+      { name: "Windows Server", level: 70, icon: "fas fa-windows" }
+    ]
+  },
+  {
+    relatedArea: "Scripting",
+    skills: [
+      { name: "Bash Scripting", level: 85, icon: "fas fa-terminal" },
+      { name: "PowerShell", level: 65, icon: "fas fa-terminal" }
+    ]
+  },
+  {
+    relatedArea: "Cloud Platforms",
+    skills: [
+      { name: "AWS", level: 75, icon: "fab fa-aws" },
+      { name: "Linode Cloud", level: 65, icon: "fas fa-cloud" },
+    ]
+  },
+  {
+    relatedArea: "Containerization",
+    skills: [
+      { name: "Docker", level: 80, icon: "fab fa-docker" }
+    ]
+  },
+  {
+    relatedArea: "Orchestration",
+    skills: [
+      { name: "Kubernetes", level: 65, icon: "fas fa-cube" }
+    ]
+  },
+  {
+    relatedArea: "Networking",
+    skills: [
+      { name: "Networking", level: 85, icon: "fas fa-network-wired" },
+      { name: "Firewalls", level: 65, icon: "fas fa-shield-alt" }
     ]
   },
   {
     relatedArea: "Databases",
     skills: [
-      { name: "MongoDB", level: 70, icon: "fas fa-database" },
-      { name: "MySQL", level: 75, icon: "fas fa-database" }
+      { name: "MongoDB", level: 75, icon: "fas fa-database" },
+      { name: "MySQL", level: 70, icon: "fas fa-database" },
+      { name: "Redis", level: 60, icon: "fas fa-memory" }
     ]
   },
   {
-    relatedArea: "Security & Encryption",
+    relatedArea: "Version Control",
     skills: [
-      { name: "Encryption", level: 65, icon: "fas fa-lock" }
+      { name: "Git", level: 85, icon: "fab fa-git" }
     ]
   },
   {
-    relatedArea: "Version Control & Collaboration",
+    relatedArea: "CI/CD Tools",
     skills: [
-      { name: "Git", level: 80, icon: "fab fa-git" }
+      { name: "GitHub Actions", level: 75, icon: "fab fa-github" },
+      { name: "Jenkins", level: 65, icon: "fas fa-cogs" },
     ]
   },
   {
-    relatedArea: "Data Science & Machine Learning",
+    relatedArea: "Data Science",
     skills: [
-      { name: "Machine Learning", level: 60, icon: "fas fa-robot" }
+      { name: "Machine Learning", level: 65, icon: "fas fa-robot" },
+      { name: "Pandas", level: 60, icon: "fas fa-table" },
+      { name: "scikit-learn", level: 55, icon: "fas fa-brain" }
     ]
   }
+];
+
+
+export const skills = [
+  "All",
+  "React",
+  "API Development",
+  "FastAPI",
+  "Django",
+  "Flask",
+  "Web Deployment",
+  "Web Servers",
+  "Linux",
+  "DBMS",  
+  "Python",
+  "CI/CD",
+  "Node.js",
+  "AWS", 
+  "Ansible",
+  "Docker",  
+  "Kubernetes",
+  "Scripting",
 ];
 
 export const defaultSkillArea = categorizedSkills[0].relatedArea;

@@ -46,6 +46,7 @@ export default function Education() {
      setEducationCardHeight((educationCardRef.current.scrollHeight + 175));
     }
   },[openCard])
+  
   return (
     <>
       <EducationSectionWrapper>
