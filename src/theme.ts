@@ -12,9 +12,9 @@ const theme: DefaultTheme = {
     secondaryFontColor: '#000000',
   },
   fonts: {
-    small: '0.85rem',
-    medium: '0.9rem',
-    large: '1rem',
+    small: '0.8rem',
+    medium: '0.8rem',
+    large: '0.9rem',
   },
 };
 

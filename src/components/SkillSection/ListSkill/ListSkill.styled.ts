@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Card } from "../../../commonStyles/common.styled";
+import styled from 'styled-components';
+import { Card } from '../../../commonStyles/common.styled';
 
 export const SkillsContainer = styled(Card)`
   padding: 20px;
@@ -9,27 +9,21 @@ export const SkillsContainer = styled(Card)`
   gap: 10px;
   width: 100%;
   margin: 0 auto;
-  background-color: ${({theme}) => theme.colors.primaryBg};
+  background-color: ${({ theme }) => theme.colors.primaryBg};
 
-  @media (min-width: 600px) { 
-  
-  
+  @media (min-width: 600px) {
     width: 90%;
-    align-items: flex-start; 
-}
+    align-items: flex-start;
+  }
 
-@media (min-width: 900px) {
-  
+  @media (min-width: 900px) {
     width: 95%;
-
- 
-}
+  }
 `;
 
 export const SkillsTitle = styled.h3`
-  color: ${({theme}) => theme.colors.secondaryFontColor};
+  color: ${({ theme }) => theme.colors.secondaryFontColor};
 `;
-
 
 export const SkillsAreaContainer = styled.div`
   display: grid;
@@ -37,7 +31,7 @@ export const SkillsAreaContainer = styled.div`
   gap: 20px;
   width: 100%;
 
-  @media (min-width: 600px) { 
+  @media (min-width: 600px) {
     grid-template-columns: auto auto;
   }
 
@@ -45,5 +39,3 @@ export const SkillsAreaContainer = styled.div`
     grid-template-columns: auto auto auto;
   }
 `;
-
- 
