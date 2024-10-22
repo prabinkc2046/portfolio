@@ -25,6 +25,7 @@ type FormData = {
 };
 
 export const Contact = () => {
+  const [isSending, setIsSending] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
   const [formData, setFormData] = useState<FormData>({
     name: '',
@@ -44,7 +45,7 @@ export const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
+    setIsSending(true);
     try {
       const response = await fetch(
         `${process.env.REACT_APP_EMAIL_API_URL}/message-from-portfolio`,
@@ -59,6 +60,7 @@ export const Contact = () => {
 
       if (response.ok) {
         toast.success('Email is sent');
+        setIsSending(false);
         setFormData({
           name: '',
           email: '',
@@ -67,10 +69,12 @@ export const Contact = () => {
       } else {
         const errorData = await response.json();
         toast.error(`Email could not be sent: ${errorData.message}`);
+        setIsSending(false);
       }
     } catch (error) {
       console.error('API error:', error);
       toast.error('Failed to send email. Please try again later.');
+      setIsSending(false);
     }
   };
 
@@ -128,7 +132,9 @@ export const Contact = () => {
               required
             ></TextArea>
 
-            <Button type="submit">Send Message</Button>
+            <Button type="submit">
+              {isSending ? 'Sending...' : 'Send Message'}
+            </Button>
           </ContactForm>
         </ContactInfoFormContainer>
       </ContactSection>
