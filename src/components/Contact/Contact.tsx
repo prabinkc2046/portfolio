@@ -47,7 +47,7 @@ export const Contact = () => {
 
     try {
       const response = await fetch(
-        `${process.env.REACT_APP_EMAIL_API_URL}/send-message`,
+        `${process.env.REACT_APP_EMAIL_API_URL}/message-from-portfolio`,
         {
           method: 'POST',
           headers: {
