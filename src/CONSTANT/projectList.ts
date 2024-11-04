@@ -15,6 +15,8 @@ import {
   faBacon,
   faBox,
   faCube,
+  faHandsHelping,
+  faEnvelopeOpenText,
 } from '@fortawesome/free-solid-svg-icons';
 
 export const projects: ProjectType[] = [
@@ -69,6 +71,39 @@ export const projects: ProjectType[] = [
     githubLink:
       'https://github.com/prabinkc2046/TemperatureDashboard_Backend_NodeJS_TypeScript_MongoDB',
     icon: faThermometerFull,
+  },
+  {
+    name: 'Disaster Relief Fundraising Site for Nepal Flood Victims',
+    description:
+      'Developed an informative and fundraising website to support flood victims in Nepal. Integrated a real-time dashboard for tracking donations and built robust backend functionalities for data processing and security.',
+    outcome:
+      'Built a responsive site with live donation tracking, integrated email notifications, and implemented CSRF protection. Backend handled by FastAPI for donor management and NodeJS for email services.',
+    skills: ['React', 'MongoDB', 'API Development', 'Node.js', 'FastAPI'],
+    githubLink: 'https://github.com/prabinkc2046/Nepal-Flood-Support.git',
+    youtubeLink: 'https://nepal-flood-support.vercel.app/',
+    icon: faHandsHelping,
+  },
+  {
+    name: 'Backend Email Service for Disaster Relief Notifications',
+    description:
+      'Created a secure backend email service in Node.js to send automated donation confirmations and updates to donors, enhancing donor engagement and transparency.',
+    outcome:
+      'Implemented a Node.js server with email functionality to automatically notify donors about successful transactions and provide regular campaign updates. Configured environment variables for secure handling of email credentials and set up CSRF protection for added security.',
+    skills: ['Node.js'],
+    githubLink:
+      'https://github.com/prabinkc2046/Nepal-Flood-Support-Email-Backend.git',
+    icon: faEnvelopeOpenText,
+  },
+  {
+    name: 'User Data Management Service with FastAPI and MongoDB',
+    description:
+      'Developed a backend service using FastAPI to manage donor data securely, with MongoDB for efficient data storage and retrieval. This service supports the flood relief fundraising campaign by handling user profiles and donation records.',
+    outcome:
+      'Designed RESTful API endpoints to store, update, and retrieve donor information. Implemented data validation, CSRF protection, and optimized MongoDB queries for high performance, ensuring secure and efficient management of user data.',
+    skills: ['FastAPI', 'MongoDB'],
+    githubLink:
+      'https://github.com/prabinkc2046/Nepal-Flood-Support-backend.git',
+    icon: faDatabase,
   },
   {
     name: 'File Management System with Text Extraction and Summarization',
