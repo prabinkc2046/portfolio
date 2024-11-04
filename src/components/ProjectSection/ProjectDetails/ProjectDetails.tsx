@@ -1,37 +1,48 @@
-import type { ProjectType } from '../../../CONSTANT/CONSTANT.types'
-import { ProjectCard, ProjectTitle, ProjectLink } from './ProjectDetails.styled'
+import type { ProjectType } from '../../../CONSTANT/CONSTANT.types';
+import {
+  ProjectCard,
+  ProjectTitle,
+  ProjectLink,
+} from './ProjectDetails.styled';
 
 type ProjectDetailsProps = {
-    projects: ProjectType[];
-    expandedProjectIndex: null | number
-}
+  projects: ProjectType[];
+  expandedProjectIndex: null | number;
+};
 
-export default function ProjectDetails({projects, expandedProjectIndex}: ProjectDetailsProps) {
+export default function ProjectDetails({
+  projects,
+  expandedProjectIndex,
+}: ProjectDetailsProps) {
   return (
-      
     <>
-    {expandedProjectIndex !== null && (
+      {expandedProjectIndex !== null && (
         <ProjectCard>
-        <ProjectTitle>{projects[expandedProjectIndex].name}</ProjectTitle>
-        <p>{projects[expandedProjectIndex].description}</p>
-        <p>
+          <ProjectTitle>{projects[expandedProjectIndex].name}</ProjectTitle>
+          <p>{projects[expandedProjectIndex].description}</p>
+          <p>
             <strong>Outcome:</strong> {projects[expandedProjectIndex].outcome}
-        </p>
-        <ProjectLink>
+          </p>
+          <ProjectLink>
             {projects[expandedProjectIndex].youtubeLink && (
-            <a href={projects[expandedProjectIndex].youtubeLink} target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-youtube"></i> Watch Demo
-            </a>
+              <a
+                href={projects[expandedProjectIndex].youtubeLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fas fa-play"></i> See in Action{' '}
+              </a>
             )}
-            <a href={projects[expandedProjectIndex].githubLink} target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-github"></i> View Code
+            <a
+              href={projects[expandedProjectIndex].githubLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="fab fa-github"></i> View Code
             </a>
-        </ProjectLink>
+          </ProjectLink>
         </ProjectCard>
-    )}
-     
+      )}
     </>
-       
-   
-  )
+  );
 }
