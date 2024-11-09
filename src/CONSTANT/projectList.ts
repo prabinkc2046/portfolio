@@ -21,6 +21,18 @@ import {
 
 export const projects: ProjectType[] = [
   {
+    name: 'File Management System with Text Extraction and Summarization',
+    description:
+      'Developed the backend of a full-stack application for efficient file management, text extraction, and summarization using FastAPI.',
+    outcome:
+      'Enhanced document handling, analysis, and management with a secure, scalable, and user-friendly backend solution.',
+    skills: ['FastAPI', 'Python', 'API Development', 'MongoDB'],
+    githubLink:
+      'https://github.com/prabinkc2046/FileManagementAndStoragePoweredByAIFileSummarisation-FastAPI-OpenAI-MongoDB',
+    icon: faFileAlt,
+  },
+
+  {
     name: 'Personal Portfolio Website',
     description:
       'Developed a responsive portfolio website using React and TypeScript to showcase projects, skills, and experience.',
