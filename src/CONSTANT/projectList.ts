@@ -21,7 +21,7 @@ import {
 
 export const projects: ProjectType[] = [
   {
-    name: 'File Management System with Text Extraction and Summarization',
+    name: 'File Management With OpenAI, FastAPI, and MongoDB',
     description:
       'Developed the backend of a full-stack application for efficient file management, text extraction, and summarization using FastAPI.',
     outcome:
