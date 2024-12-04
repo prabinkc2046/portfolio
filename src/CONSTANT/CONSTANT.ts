@@ -6,7 +6,7 @@ import Education from '../components/Education/Education';
 import Testimony from '../components/Testimony/Testimony';
 import { Contact } from '../components/Contact/Contact';
 import Repository from '../components/Repository/Repository';
-
+import Chat from '../components/Chat/Chat';
 import {
   faThermometerFull,
   faFileAlt,
@@ -481,6 +481,7 @@ export const categorizedSkills: CategorizedSkillType[] = [
 
 export const skills = [
   'All',
+  'Prompt Engineering',
   'React',
   'API Development',
   'FastAPI',
@@ -621,4 +622,5 @@ export const sectionList: SectionType[] = [
   { id: 'repository', component: Repository },
   { id: 'testimony', component: Testimony },
   { id: 'contact', component: Contact },
+  { id: 'chat', component: Chat },
 ];

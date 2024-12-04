@@ -17,9 +17,22 @@ import {
   faCube,
   faHandsHelping,
   faEnvelopeOpenText,
+  faRobot,
 } from '@fortawesome/free-solid-svg-icons';
 
 export const projects: ProjectType[] = [
+  {
+    name: 'AI-Powered Personal Assistant Chatbot with Node.js, Express, JWT, and Caching',
+    description:
+      'Developed the backend for an AI-powered personal assistant chatbot using Node.js and Express. Integrated JWT for secure authentication and middleware for various tasks. Utilized prompt engineering to optimize the AI model for answering questions specifically about my profile and personal information. Implemented an efficient caching system to speed up response times and reduce server load.',
+    outcome:
+      'Created a secure, scalable, and efficient chatbot solution capable of personalized interactions with optimized performance through caching, ensuring fast and accurate responses about my profile and personal information.',
+    skills: ['Node.js', 'Express', 'Prompt Engineering', 'API Development'],
+    githubLink:
+      'https://github.com/prabinkc2046/AI-POWERED-PERSONAL-ASSISTANCE-FOR-PORTFOLIO-SITE',
+    icon: faRobot,
+  },
+
   {
     name: 'File Management With OpenAI, FastAPI, and MongoDB',
     description:
