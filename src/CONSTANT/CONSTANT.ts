@@ -6,7 +6,8 @@ import Education from '../components/Education/Education';
 import Testimony from '../components/Testimony/Testimony';
 import { Contact } from '../components/Contact/Contact';
 import Repository from '../components/Repository/Repository';
-import Chat from '../components/Chat/Chat';
+import { Chat } from '../components/Chat/Chat/Chat';
+
 import {
   faThermometerFull,
   faFileAlt,
@@ -611,6 +612,7 @@ export const NavbarMenuItemsList: NavMenuItemType[] = [
   { id: '#education', displayName: 'Education' },
   { id: '#testimony', displayName: 'Testimony' },
   { id: '#contact', displayName: 'Contact' },
+  { id: '#chat', displayName: 'Chat' },
 ];
 
 export const sectionList: SectionType[] = [
