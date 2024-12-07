@@ -32,7 +32,6 @@ export const Contact = () => {
     email: '',
     message: '',
   });
-
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {

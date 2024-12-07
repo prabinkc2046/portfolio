@@ -31,7 +31,6 @@ const getBotResponse = async (
       messageBody,
       config
     );
-    console.log('Response', response);
 
     // Get data
     return response.data;

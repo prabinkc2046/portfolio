@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { TypingIndicator } from '../TypingIndicator/TypingIndicator';
 import { MessageBubble } from '../MessageBubble/MessageBubble';
 import { MessageContainer, Messages, ScrollAnchor } from './MessageArea.styles';
@@ -21,8 +21,10 @@ export const MessageArea: React.FC<MessageAreaProps> = ({
 
   // Scroll to the bottom when messages change
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'auto' });
-  }, [messages]);
+    if (messages.length > 1) {
+      messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [messages.length]);
 
   return (
     <MessageContainer>

@@ -1,12 +1,14 @@
 import { profileIntro } from '../../CONSTANT/CONSTANT';
-import { PersonalInfoStyled, ProfilePhotoContainer, ProfilePhoto, PersonalText } from './PersonalInfo.styled';
-
+import {
+  PersonalInfoStyled,
+  ProfilePhotoContainer,
+  ProfilePhoto,
+  PersonalText,
+} from './PersonalInfo.styled';
 
 export default function PersonalInfo() {
   return (
-    
     <PersonalInfoStyled>
-
       <ProfilePhotoContainer>
         <ProfilePhoto />
       </ProfilePhotoContainer>
@@ -15,7 +17,6 @@ export default function PersonalInfo() {
         <h2>Prabin K C</h2>
         <p>{profileIntro}</p>
       </PersonalText>
-
     </PersonalInfoStyled>
   );
 }

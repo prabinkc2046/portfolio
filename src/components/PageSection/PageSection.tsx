@@ -9,7 +9,10 @@ type VisibilitySectionProps = {
   Component: React.ElementType; // React component to render
 };
 
-export const PageSection: React.FC<VisibilitySectionProps> = ({ id, Component }) => {
+export const PageSection: React.FC<VisibilitySectionProps> = ({
+  id,
+  Component,
+}) => {
   return (
     <VisibilitySensor partialVisibility>
       {({ isVisible }: { isVisible: boolean }) => (
