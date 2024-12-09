@@ -29,12 +29,11 @@ export const ChatHeader = styled.div`
 `;
 
 export const StyledChat = styled.div`
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: space-between;
-  /* gap: 30px; */
+  align-items: stretch;
+  gap: 10px;
   width: 100%;
   max-width: 600px; /* Maximum width for the chat window */
   margin: 20px auto; /* Center the chat */
@@ -43,9 +42,13 @@ export const StyledChat = styled.div`
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   height: 500px;
   overflow: hidden;
-  padding: 10px 20px;
+  padding: 8px 6px;
 
+  @media (min-width: 330px) {
+    padding: 10px;
+  }
   @media (min-width: 600px) {
-    height: 400px;
+    height: 600px;
+    padding: 15px;
   }
 `;

@@ -20,11 +20,13 @@ interface Message {
 interface MessageInputProps {
   setMessages: React.Dispatch<React.SetStateAction<Message[]>>;
   setIsTyping: React.Dispatch<React.SetStateAction<boolean>>;
+  isTyping: boolean;
 }
 
 export const MessageInput: React.FC<MessageInputProps> = ({
   setMessages,
   setIsTyping,
+  isTyping,
 }) => {
   const [input, setInput] = useState<string>('');
   const [token, setToken] = useState<string>('');
@@ -78,7 +80,7 @@ export const MessageInput: React.FC<MessageInputProps> = ({
         onChange={handleInputChange}
         onKeyDown={handleKeyPress}
       />
-      <SendMessageButton onClick={handleSendMessage}>
+      <SendMessageButton disabled={isTyping} onClick={handleSendMessage}>
         <SendMessageIcon icon={faPaperPlane} />
       </SendMessageButton>
     </InputArea>

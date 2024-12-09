@@ -5,10 +5,9 @@ interface MessageBubbleWrapperProps {
 }
 
 export const MessageBubbleWrapper = styled.li<MessageBubbleWrapperProps>`
-  max-width: 70%;
+  max-width: 95%;
   padding: 10px 15px;
   margin: 5px;
-  font-size: 14px;
   line-height: 1.4;
   position: relative;
   border-radius: 20px;
@@ -16,6 +15,16 @@ export const MessageBubbleWrapper = styled.li<MessageBubbleWrapperProps>`
   font-size: 14px;
   line-height: 1.4;
   word-wrap: break-word;
+
+  @media (min-width: 330px) {
+    max-width: 80%;
+    padding: 11px 16px;
+  }
+
+  @media (min-width: 600px) {
+    max-width: 70%;
+    padding: 12px 18px;
+  }
 
   ${({ isUser }) =>
     isUser
@@ -57,9 +66,17 @@ export const MessageBubbleWrapper = styled.li<MessageBubbleWrapperProps>`
 
 export const MessageContent = styled.div`
   // margin-bottom: 5px;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 1.2;
   letter-spacing: 1px;
+
+  @media (min-width: 330px) {
+    font-size: 16px;
+  }
+
+  @media (min-width: 600px) {
+    font-size: 18px;
+  }
 `;
 
 export const AdditionalContent = styled.div`

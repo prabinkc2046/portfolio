@@ -13,6 +13,8 @@ export const MessageContainer = styled.div`
   /* margin: 20px; */
   background-color: #f7f7f7;
   overflow-y: auto;
+  border: 1px solid #ccc;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
 
   &::-webkit-scrollbar {
     display: none;

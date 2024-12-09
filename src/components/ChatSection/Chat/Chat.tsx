@@ -11,7 +11,7 @@ interface Message {
 const defaultMessages: Message[] = [
   {
     isUser: false,
-    content: `Hi there! 👋 Got any question about me?`,
+    content: `Hello there! 👋 I’m Prabin’s AI assistant. I’m here to help answer any questions you have about Prabin’s skills, services, or portfolio. Feel free to ask me anything!`,
   },
 ];
 
@@ -22,9 +22,13 @@ const Chat = () => {
   return (
     // <ChatWrapper>
     <StyledChat>
-      <ChatHeader>Welcome to the Chat!</ChatHeader>
+      <ChatHeader>Ask About Prabin!</ChatHeader>
       <MessageArea messages={messages} isTyping={isTyping} />
-      <MessageInput setMessages={setMessages} setIsTyping={setIsTyping} />
+      <MessageInput
+        setMessages={setMessages}
+        setIsTyping={setIsTyping}
+        isTyping={isTyping}
+      />
     </StyledChat>
     // </ChatWrapper>
   );
