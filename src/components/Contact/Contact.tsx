@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react';
+import { useAdjustMessageAreaHeight } from './ContactUtility/adjustMessageAreaHeight';
 // import './Contact.css';
 import { toast } from 'react-toastify';
 import CopyButton from '../UtilityComponents/CopyButton/CopyButton';
@@ -11,6 +12,7 @@ import {
   ContactIconNameContainer,
   ContactForm,
   Label,
+  ContactMessage,
   Input,
   Button,
   TextArea,
@@ -18,7 +20,7 @@ import {
   ContactInfoName,
 } from './Contact.styled';
 
-type FormData = {
+export type FormData = {
   name: string;
   email: string;
   message: string;
@@ -27,11 +29,16 @@ type FormData = {
 export const Contact = () => {
   const [isSending, setIsSending] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
+  const textAreaRef = useRef<HTMLTextAreaElement>(null);
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
     message: '',
   });
+
+  // adjust height of message area
+  useAdjustMessageAreaHeight(textAreaRef, formData);
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -101,6 +108,10 @@ export const Contact = () => {
           </ContactDetailsContainer>
 
           <ContactForm ref={formRef} onSubmit={handleSubmit}>
+            <ContactMessage>
+              Please connect with me via the email below if you have any
+              specific queries.
+            </ContactMessage>
             <Label htmlFor="name">Name:</Label>
             <Input
               type="text"
@@ -123,15 +134,16 @@ export const Contact = () => {
 
             <Label htmlFor="message">Message:</Label>
             <TextArea
+              ref={textAreaRef}
               id="message"
               name="message"
-              rows={4}
+              rows={1}
               value={formData.message}
               onChange={handleChange}
               required
             ></TextArea>
 
-            <Button type="submit">
+            <Button disabled={isSending} type="submit">
               {isSending ? 'Sending...' : 'Send Message'}
             </Button>
           </ContactForm>
