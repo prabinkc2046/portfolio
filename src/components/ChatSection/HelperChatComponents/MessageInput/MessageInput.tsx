@@ -62,12 +62,23 @@ export const MessageInput: React.FC<MessageInputProps> = ({
 
     if (chatResponse) {
       const { token: newToken, message } = chatResponse;
-      setToken(newToken);
+      if (newToken) {
+        setToken(newToken);
+      }
       setMessages(prevMessages => [
         ...prevMessages,
         { isUser: false, content: message },
       ]);
       setIsTyping(false);
+    } else {
+      setIsTyping(false);
+      setMessages(prevMessages => [
+        ...prevMessages,
+        {
+          isUser: false,
+          content: 'No response received from chat server. Please try again',
+        },
+      ]);
     }
   };
 
