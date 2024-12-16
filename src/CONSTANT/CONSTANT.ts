@@ -134,16 +134,17 @@ export const categorizedSkills: CategorizedSkillType[] = [
     ],
   },
   {
-    relatedArea: 'Data Science',
+    relatedArea: 'AI',
     skills: [
-      { name: 'Machine Learning', level: 65, icon: 'fas fa-robot' },
-      { name: 'Pandas', level: 60, icon: 'fas fa-table' },
-      { name: 'scikit-learn', level: 55, icon: 'fas fa-brain' },
+      { name: 'AI', level: 5, icon: 'fas fa-robot' },
+      { name: 'Pandas', level: 5, icon: 'fas fa-table' },
+      { name: 'scikit-learn', level: 5, icon: 'fas fa-brain' },
     ],
   },
 ];
 
 export const skills = [
+  'AI',
   'All',
   'Prompt Engineering',
   'React',

@@ -22,12 +22,23 @@ import {
 
 export const projects: ProjectType[] = [
   {
+    name: 'AI-Powered Intent Classifier for Portfolio Site with BERT and FastAPI',
+    description:
+      'Developed an AI-powered intent classification system using BERT for a personalized portfolio site. Fine-tuned the BERT model on a custom dataset to classify user inputs into predefined intents such as "introduction", "skills", "projects", and more. The backend was built with FastAPI, providing a fast, scalable API for real-time text classification. Dockerized the application to ensure a consistent deployment environment, simplifying containerization and making it easy to deploy across different platforms.',
+    outcome:
+      'Created an intelligent system capable of classifying user queries into intents, enhancing user interaction on the portfolio site. Dockerization ensured portability and consistency across environments, enabling easy deployment and scalability. The model fine-tuning and API optimization provided accurate and real-time responses to user inputs, improving user engagement and navigation on the site.',
+    skills: ['FastAPI', 'Docker', 'AI', 'Python'],
+    githubLink:
+      'https://github.com/prabinkc2046/Intent-Classifier-Powered-by-BERT.git',
+    icon: faRobot,
+  },
+  {
     name: 'AI-Powered Personal Assistant Chatbot with Node.js, Express, JWT, and Caching',
     description:
       'Developed the backend for an AI-powered personal assistant chatbot using Node.js and Express. Integrated JWT for secure authentication and middleware for various tasks. Utilized prompt engineering to optimize the AI model for answering questions specifically about my profile and personal information. Implemented an efficient caching system to speed up response times and reduce server load.',
     outcome:
       'Created a secure, scalable, and efficient chatbot solution capable of personalized interactions with optimized performance through caching, ensuring fast and accurate responses about my profile and personal information.',
-    skills: ['Node.js', 'Express', 'Prompt Engineering', 'API Development'],
+    skills: ['Node.js', 'Express', 'AI', 'API Development'],
     githubLink:
       'https://github.com/prabinkc2046/AI-POWERED-PERSONAL-ASSISTANCE-FOR-PORTFOLIO-SITE',
     icon: faRobot,
@@ -39,7 +50,7 @@ export const projects: ProjectType[] = [
       'Developed the backend of a full-stack application for efficient file management, text extraction, and summarization using FastAPI.',
     outcome:
       'Enhanced document handling, analysis, and management with a secure, scalable, and user-friendly backend solution.',
-    skills: ['FastAPI', 'Python', 'API Development', 'MongoDB'],
+    skills: ['FastAPI', 'Python', 'API Development', 'MongoDB', 'AI'],
     githubLink:
       'https://github.com/prabinkc2046/FileManagementAndStoragePoweredByAIFileSummarisation-FastAPI-OpenAI-MongoDB',
     icon: faFileAlt,
@@ -62,6 +73,7 @@ export const projects: ProjectType[] = [
       'Git',
       'Responsive Design',
       'Context API',
+      'AI',
     ],
     githubLink: 'https://github.com/prabinkc2046/portfolio',
     icon: faLaptopCode,
