@@ -1,53 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Character encoding for the HTML document -->
+    <meta charset="utf-8" />
 
-<head>
-  <!-- Character encoding for the HTML document -->
-  <meta charset="utf-8" />
+    <!-- Ensure proper display and touch zooming on all devices -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1.5, minimum-scale=0.5, user-scalable=yes"
+    />
 
-  <!-- Ensure proper display and touch zooming on all devices -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.5, minimum-scale=0.5, user-scalable=yes" />
+    <!-- Primary icon displayed in browser tab -->
+    <link rel="icon" href="%PUBLIC_URL%/images/favicon.ico" />
 
-  <!-- Primary icon displayed in browser tab -->
-  <link rel="icon" href="%PUBLIC_URL%/images/favicon.ico" />
+    <!-- Theme color for browsers and mobile devices -->
+    <meta name="theme-color" content="#000000" />
 
-  <!-- Theme color for browsers and mobile devices -->
-  <meta name="theme-color" content="#000000" />
+    <!-- Meta description for SEO (update this to describe your site accurately) -->
+    <meta
+      name="description"
+      content="Prabin K C's portfolio showcasing full-stack development, DevOps, and software engineering skills."
+    />
 
-  <!-- Meta description for SEO (update this to describe your site accurately) -->
-  <meta name="description" content="Prabin K C's portfolio showcasing full-stack development, DevOps, and software engineering skills." />
+    <!-- Open Graph meta tags for better social media integration -->
+    <meta
+      property="og:title"
+      content="Prabin K C - Full Stack Developer and DevOps Specialist"
+    />
+    <meta
+      property="og:description"
+      content="A portfolio site showcasing projects, skills, and expertise in full-stack development, DevOps, and more."
+    />
+    <meta
+      property="og:image"
+      content="%PUBLIC_URL%/images/portfolio-preview.png"
+    />
+    <!-- Replace with the actual path to your preview image -->
+    <meta
+      property="og:url"
+      content="https://prabinkc2046.github.io/portfolio"
+    />
+    <meta property="og:type" content="website" />
 
-  <!-- Open Graph meta tags for better social media integration -->
-  <meta property="og:title" content="Prabin K C - Full Stack Developer and DevOps Specialist" />
-  <meta property="og:description" content="A portfolio site showcasing projects, skills, and expertise in full-stack development, DevOps, and more." />
-  <meta property="og:image" content="%PUBLIC_URL%/images/portfolio-preview.png" /> <!-- Replace with the actual path to your preview image -->
-  <meta property="og:url" content="https://prabinkc2046.github.io/portfolio" />
-  <meta property="og:type" content="website" />
+    <!-- Icon for Apple devices -->
+    <link
+      rel="apple-touch-icon"
+      href="%PUBLIC_URL%/images/apple-touch-icon.png"
+    />
 
-  <!-- Icon for Apple devices -->
-  <link rel="apple-touch-icon" href="%PUBLIC_URL%/images/apple-touch-icon.png" />
+    <!-- Web app manifest for progressive web apps -->
+    <link rel="manifest" href="%PUBLIC_URL%/site.webmanifest" />
 
-  <!-- Web app manifest for progressive web apps -->
-  <link rel="manifest" href="%PUBLIC_URL%/site.webmanifest" />
+    <!-- Additional icons for different devices -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="%PUBLIC_URL%/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="%PUBLIC_URL%/images/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="%PUBLIC_URL%/images/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="%PUBLIC_URL%/images/android-chrome-512x512.png"
+    />
 
-  <!-- Additional icons for different devices -->
-  <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/images/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/images/favicon-16x16.png" />
-  <link rel="icon" type="image/png" sizes="192x192" href="%PUBLIC_URL%/images/android-chrome-192x192.png" />
-  <link rel="icon" type="image/png" sizes="512x512" href="%PUBLIC_URL%/images/android-chrome-512x512.png" />
+    <!-- Title of the web page (important for SEO and accessibility) -->
+    <title>Prabin K C - Full Stack Developer & DevOps Specialist</title>
 
-  <!-- Title of the web page (important for SEO and accessibility) -->
-  <title>Prabin K C - Full Stack Developer & DevOps Specialist</title>
-</head>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Brisbane Web Solutions Australia",
+        "description": "Your trusted partner for web development, AI integration, and SEO solutions across Australia, with a strong base in Brisbane.",
+        "url": "https://prabinkc2046.github.io/portfolio/",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "123 Digital Drive",
+          "addressLocality": "Brisbane",
+          "addressRegion": "QLD",
+          "postalCode": "4000",
+          "addressCountry": "AU"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "telephone": "0473654956",
+        "priceRange": "$$$",
+        "openingHours": "Mo-Fr 09:00-18:00",
+        "sameAs": [
+          "https://www.linkedin.com/in/experiencedfullstackdeveoperprabinkc/"
+        ],
+        "areaServed": {
+          "@type": "Country",
+          "name": "Australia"
+        },
+        "services": [
+          {
+            "@type": "Service",
+            "name": "Web Development",
+            "description": "Custom, scalable, and responsive web solutions for businesses across Australia."
+          },
+          {
+            "@type": "Service",
+            "name": "AI Integration",
+            "description": "Enhance your website's functionality with cutting-edge AI technologies like chatbots, recommendation systems, and automated workflows."
+          },
+          {
+            "@type": "Service",
+            "name": "SEO Optimization",
+            "description": "Drive traffic and improve search engine rankings with targeted SEO strategies."
+          },
+          {
+            "@type": "Service",
+            "name": "Web Design",
+            "description": "User-centric and visually compelling designs tailored to your business."
+          },
+          {
+            "@type": "Service",
+            "name": "E-commerce Solutions",
+            "description": "Comprehensive e-commerce platforms with advanced features like AI-powered product recommendations."
+          },
+          {
+            "@type": "Service",
+            "name": "Cloud Integration",
+            "description": "Seamless cloud-based solutions to ensure your website is always available and scalable."
+          }
+        ],
+        "keywords": "Web Development, AI Integration, SEO, Web Design, E-commerce, Cloud Integration, Brisbane, Australia"
+      }
+    </script>
+  </head>
 
-<body>
-  <!-- Message for users with JavaScript disabled -->
-  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <body>
+    <!-- Message for users with JavaScript disabled -->
+    <noscript>You need to enable JavaScript to run this app.</noscript>
 
-  <!-- React app mount point -->
-  <div id="root"></div>
+    <!-- React app mount point -->
+    <div id="root"></div>
 
-  <!-- You can add web fonts, meta tags, or analytics to this file. -->
-</body>
-
+    <!-- You can add web fonts, meta tags, or analytics to this file. -->
+  </body>
 </html>
